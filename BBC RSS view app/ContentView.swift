@@ -17,12 +17,21 @@ struct NewsItem: View {
   var body: some View {
       
     VStack {
-      Text(item?.title ?? "Nothing here")
+        
+     Image(uiImage: UIImage(data: try! Data(contentsOf: URL(string: item?.img ?? "")!))!)
+            .resizable()
+            .frame(width: 400, height: 200)
+        
+      Text(item?.title ?? "")
+            .frame(width: 335)
             .fontDesign(.rounded)
             .bold()
-      Image(uiImage: UIImage(data: try! Data(contentsOf: URL(string: item?.img ?? "")!))!)
-            .cornerRadius(25)
-            
+            .font(.system(size: 30))
+        Spacer()
+        Text(item?.description ?? "")
+            .frame(width: 335)
+            .fontDesign(.serif)
+            .multilineTextAlignment(.leading)
     }
   }
 }
