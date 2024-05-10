@@ -12,10 +12,8 @@ import WebKit
 
 struct NewsItem: View {
   var item: Item?
-  let formatter1 = DateFormatter( )
-    
   
-    
+
   var body: some View {
       
     VStack {
@@ -38,7 +36,7 @@ struct NewsItem: View {
             .frame(width: 335)
             .fontDesign(.serif)
             .multilineTextAlignment(.leading)
-        Text(item?.pubDate ?? Date.now, style: .date)
+        Text(item?.pubDate ?? Date.now, style: .time)
             .multilineTextAlignment(.leading)
             .foregroundColor(.gray)
             .opacity(0.5)
