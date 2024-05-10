@@ -11,6 +11,8 @@
 		E05A91912BED9D2400CB8BB7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05A91902BED9D2400CB8BB7 /* ContentView.swift */; };
 		E05A91932BED9D2600CB8BB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E05A91922BED9D2600CB8BB7 /* Assets.xcassets */; };
 		E05A91962BED9D2600CB8BB7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E05A91952BED9D2600CB8BB7 /* Preview Assets.xcassets */; };
+		E05A919D2BED9D3B00CB8BB7 /* APIservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05A919C2BED9D3B00CB8BB7 /* APIservice.swift */; };
+		E05A91A02BED9D9700CB8BB7 /* FeedKit in Frameworks */ = {isa = PBXBuildFile; productRef = E05A919F2BED9D9700CB8BB7 /* FeedKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,7 @@
 		E05A91902BED9D2400CB8BB7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E05A91922BED9D2600CB8BB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E05A91952BED9D2600CB8BB7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E05A919C2BED9D3B00CB8BB7 /* APIservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIservice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E05A91A02BED9D9700CB8BB7 /* FeedKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +57,7 @@
 			children = (
 				E05A918E2BED9D2400CB8BB7 /* BBC_RSS_view_appApp.swift */,
 				E05A91902BED9D2400CB8BB7 /* ContentView.swift */,
+				E05A919C2BED9D3B00CB8BB7 /* APIservice.swift */,
 				E05A91922BED9D2600CB8BB7 /* Assets.xcassets */,
 				E05A91942BED9D2600CB8BB7 /* Preview Content */,
 			);
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = "BBC RSS view app";
+			packageProductDependencies = (
+				E05A919F2BED9D9700CB8BB7 /* FeedKit */,
+			);
 			productName = "BBC RSS view app";
 			productReference = E05A918B2BED9D2400CB8BB7 /* BBC RSS view app.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = E05A91822BED9D2400CB8BB7;
+			packageReferences = (
+				E05A919E2BED9D9700CB8BB7 /* XCRemoteSwiftPackageReference "FeedKit" */,
+			);
 			productRefGroup = E05A918C2BED9D2400CB8BB7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +150,7 @@
 			files = (
 				E05A91912BED9D2400CB8BB7 /* ContentView.swift in Sources */,
 				E05A918F2BED9D2400CB8BB7 /* BBC_RSS_view_appApp.swift in Sources */,
+				E05A919D2BED9D3B00CB8BB7 /* APIservice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +349,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E05A919E2BED9D9700CB8BB7 /* XCRemoteSwiftPackageReference "FeedKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nmdias/FeedKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E05A919F2BED9D9700CB8BB7 /* FeedKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E05A919E2BED9D9700CB8BB7 /* XCRemoteSwiftPackageReference "FeedKit" */;
+			productName = FeedKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E05A91832BED9D2400CB8BB7 /* Project object */;
 }
