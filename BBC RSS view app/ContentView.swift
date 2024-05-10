@@ -12,8 +12,8 @@ import WebKit
 
 struct NewsItem: View {
   var item: Item?
-  let formatter1 = DateFormatter()
-    formatter1.dateStyle = .short
+  let formatter1 = DateFormatter( )
+    
   
     
   var body: some View {
@@ -38,7 +38,10 @@ struct NewsItem: View {
             .frame(width: 335)
             .fontDesign(.serif)
             .multilineTextAlignment(.leading)
-        Text(formatter1.string(from: item?.description ?? ""))
+        Text(item?.pubDate ?? Date.now, style: .date)
+            .multilineTextAlignment(.leading)
+            .foregroundColor(.gray)
+            .opacity(0.5)
         
     }
   }
