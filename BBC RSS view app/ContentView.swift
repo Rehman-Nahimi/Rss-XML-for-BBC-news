@@ -40,6 +40,8 @@ struct NewsItem: View {
             .multilineTextAlignment(.leading)
             .foregroundColor(.gray)
             .opacity(0.5)
+        Spacer()
+            .frame(height: 10)
         
     }
   }
